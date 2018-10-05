@@ -13,10 +13,11 @@ class Candidate extends Component {
           <p> Party: {this.props.affiliation} </p>
           <p> Website: {this.props.url} </p>
           <p> Sources: {this.props.sources} </p>
+          <br></br><br></br>
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Name: {this.props.name}</h3>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
           </div>
     );
   }

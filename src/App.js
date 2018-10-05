@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App Container">
-        <h1>PolitiPickr</h1>
+        <span>PolitiPickr</span>
         <Results /> 
       <List />
             </div>
@@ -17,3 +17,5 @@ class App extends Component {
 }
 
 export default App;
+
+        

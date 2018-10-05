@@ -49,9 +49,11 @@ img {
     padding: 0px 20px;
     margin: 0;
     line-height:80px;
+    color: black;
 }
 .drag-tile a:hover {
     background-color: rgba(0,0,0,.2);
+    text-decoration: none;
 }
 .drag-tile p {
     padding: 0 20px;

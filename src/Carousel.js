@@ -33,8 +33,10 @@ class ControlledCarousel extends React.Component {
         direction={direction}
         onSelect={this.handleSelect}
         >
-        <Candidate />
-    
+        {this.props.candidates.map((candidate) => 
+        <Carousel.Item> <Candidate user={candidate}/> </Carousel.Item>
+        )}
+ 
       </Carousel>
     );
   }
@@ -42,6 +44,4 @@ class ControlledCarousel extends React.Component {
 
 export default ControlledCarousel;
 
-// {this.props.candidates.map((candidate) => {
-//     <Carousel.Item> <Candidate user="candidate"/> </Carousel.Item>
-// })}
+

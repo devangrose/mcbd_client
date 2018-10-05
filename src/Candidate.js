@@ -6,13 +6,13 @@ class Candidate extends Component {
   render() {
     return (
           <div>
-          <div> Results from your Choices </div>
-          {/* this.props.image down below for IMG placeholder */}
-          <img height={200} alt="900x500" src="https://pbs.twimg.com/profile_images/1004536749916164096/BlVMXUS7_400x400.jpg" /> 
-          <p> % Match placeholder </p>
-          <p> Party: {this.props.affiliation} </p>
-          <p> Website: {this.props.url} </p>
-          <p> Sources: {this.props.sources} </p>
+        
+          <h2> {this.props.user.name} </h2>
+          <img height={200} alt="900x500" src={this.props.user.img} /> 
+          
+          <h4> {this.props.user.affiliation} </h4>
+          <p> <a href="{this.props.user.url}">Website</a> </p>
+          <p> <a href="{this.props.user.sources}">Sources</a> </p>
           <br></br><br></br>
 
           {/* <Carousel.Caption>

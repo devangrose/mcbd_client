@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App Container">
-        <h1>PolitiPickr</h1>
+        <h1><a href="/">PolitiPickr</a></h1>
         <Router>
           <div>
           <Route exact path="/" component={List}/>

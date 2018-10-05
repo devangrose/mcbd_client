@@ -5,31 +5,19 @@ import {Carousel} from 'react-bootstrap';
 class Candidate extends Component {
   render() {
     return (
-       <div>
-            <Carousel.Item>
-            <img width={900} height={500} alt="900x500" src="/carousel.png" />
-            <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-            <img width={900} height={500} alt="900x500" src="/carousel.png" />
-            <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-            <img width={900} height={500} alt="900x500" src="/carousel.png" />
-            <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                </p>
-            </Carousel.Caption>
-            </Carousel.Item>
-        </div>
+          <div>
+          <div> Results from your Choices </div>
+          {/* this.props.image down below for IMG placeholder */}
+          <img height={200} alt="900x500" src="https://pbs.twimg.com/profile_images/1004536749916164096/BlVMXUS7_400x400.jpg" /> 
+          <p> % Match placeholder </p>
+          <p> Party: {this.props.affiliation} </p>
+          <p> Website: {this.props.url} </p>
+          <p> Sources: {this.props.sources} </p>
+
+          <Carousel.Caption>
+            <h3>Name: {this.props.name}</h3>
+          </Carousel.Caption>
+          </div>
     );
   }
 }

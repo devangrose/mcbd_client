@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App Container">
-        <h1>Candidate Picker</h1>
+        <h1>PolitiPickr</h1>
         <Results /> 
       </div>
     );

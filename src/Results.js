@@ -6,7 +6,7 @@ class Results extends Component {
   render() {
     return (
       <div className="App Container">
-        <h1>Results</h1>
+        <h3>Results Page</h3>
         <ControlledCarousel />
       </div>
     );

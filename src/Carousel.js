@@ -32,12 +32,16 @@ class ControlledCarousel extends React.Component {
         activeIndex={index}
         direction={direction}
         onSelect={this.handleSelect}
-      >
-      {/* Going to need a map function to map out candidate Carousel items  */}
+        >
         <Candidate />
+    
       </Carousel>
     );
   }
 }
 
 export default ControlledCarousel;
+
+// {this.props.candidates.map((candidate) => {
+//     <Carousel.Item> <Candidate user="candidate"/> </Carousel.Item>
+// })}

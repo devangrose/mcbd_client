@@ -1,4 +1,5 @@
 import SERVER_URL from './constants/server_url'
+import { Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import DragList from './DragList';
 import axios from 'axios';
@@ -110,6 +111,14 @@ const candidates = [
 ]
 
 class List extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      positions: positions,
+      redirect: false,
+      redirectUrl: ''
+    };
+  }
   handleClick = (e, index, stance) => {
     var newpositions = this.state.positions;
     var position = null;
@@ -121,12 +130,6 @@ class List extends Component {
     this.setState({ positions: newpositions});
     console.log(this.state.positions);
     console.log('made it!');
-  }
-  constructor(props){
-    super(props);
-    this.state = {
-      positions: positions
-    };
   }
   canSubmit = () => {
     var to_return = true;
@@ -163,12 +166,20 @@ class List extends Component {
           }
         }
         var matches = [min.data, min2.data];
+        this.setState({
+
+          redirect: true,
+          redirectUrl: '/results/' + min.data.name + '/' + min2.data.name,
+        })
         console.log(matches);
         
     }
   };
     
   render(){
+    if(this.state.redirect){
+      return ( <Redirect to={this.state.redirectUrl}/> )
+    }
     return (
       <div className="margins-bruh">
         <DragList handleClick={this.handleClick} items={this.state.positions}/>

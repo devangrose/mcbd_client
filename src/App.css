@@ -30,3 +30,35 @@
     transform: rotate(360deg);
   }
 }
+
+.inline {
+    display: inline-block;
+}
+
+.div {
+    padding: 0;
+}
+.drag-tile {
+    padding: 0;
+}
+.drag-tile a {
+    padding: 0px 20px;
+    margin: 0;
+    line-height:80px;
+}
+.drag-tile a:hover {
+    background-color: rgba(0,0,0,.2);
+}
+.drag-tile p {
+    padding: 0 20px;
+}
+.margins-bruh {
+    width: 75%;
+    margin: auto;
+}
+.active {
+    background-color: rgba(0,0,0,.2);
+}
+.inactive {
+    background-color: red;
+}
